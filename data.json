@@ -29,7 +29,24 @@
             "Location": "Homewood Campus",
             "Building": "Maryland, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 10:00AM - 10:50AM, T 1:30PM - 2:20PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "10:00 AM - 10:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "T",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "01:30 PM - 02:20 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Maryland",
+                    "Room": "110"
+                }
+            ],
             "Areas": "Q",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -68,7 +85,24 @@
             "Location": "Homewood Campus",
             "Building": "Krieger, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 10:00AM - 10:50AM, T 3:00PM - 3:50PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "10:00 AM - 10:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "T",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "03:00 PM - 03:50 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Krieger",
+                    "Room": "308"
+                }
+            ],
             "Areas": "Q",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -107,7 +141,24 @@
             "Location": "Homewood Campus",
             "Building": "Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 10:00AM - 10:50AM, T 4:30PM - 5:20PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "10:00 AM - 10:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "T",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "04:30 PM - 05:20 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "300"
+                }
+            ],
             "Areas": "Q",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -146,7 +197,24 @@
             "Location": "Homewood Campus",
             "Building": "Gilman, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 10:00AM - 10:50AM, T 6:00PM - 6:50PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "10:00 AM - 10:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "T",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "06:00 PM - 06:50 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Gilman",
+                    "Room": "186"
+                }
+            ],
             "Areas": "Q",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -185,7 +253,24 @@
             "Location": "Homewood Campus",
             "Building": "Gilman, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 10:00AM - 10:50AM, Th 1:30PM - 2:20PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "10:00 AM - 10:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "Th",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "01:30 PM - 02:20 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Gilman",
+                    "Room": "400"
+                }
+            ],
             "Areas": "Q",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -224,7 +309,24 @@
             "Location": "Homewood Campus",
             "Building": "Latrobe, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 10:00AM - 10:50AM, Th 3:00PM - 3:50PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "10:00 AM - 10:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "Th",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "03:00 PM - 03:50 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Latrobe",
+                    "Room": "120"
+                }
+            ],
             "Areas": "Q",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -263,7 +365,24 @@
             "Location": "Homewood Campus",
             "Building": "Krieger, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 10:00AM - 10:50AM, Th 4:30PM - 5:20PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "10:00 AM - 10:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "Th",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "04:30 PM - 05:20 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Krieger",
+                    "Room": "308"
+                }
+            ],
             "Areas": "Q",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -302,7 +421,24 @@
             "Location": "Homewood Campus",
             "Building": "Gilman, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 10:00AM - 10:50AM, Th 6:00PM - 6:50PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "10:00 AM - 10:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "Th",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "06:00 PM - 06:50 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Gilman",
+                    "Room": "55"
+                }
+            ],
             "Areas": "Q",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -382,7 +518,16 @@
             "Location": "Homewood Campus",
             "Building": "Maryland",
             "HasBio": null,
-            "Meetings": "TTh 10:30AM - 11:45AM",
+            "Meetings": [
+                {
+                    "DOW": "TTh",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "10:30 AM - 11:45 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Maryland",
+                    "Room": "109"
+                }
+            ],
             "Areas": "S",
             "InstructionMethod": "In-person",
             "SectionCoRequisites": "",
@@ -423,7 +568,16 @@
             "Location": "Homewood Campus",
             "Building": "Maryland",
             "HasBio": null,
-            "Meetings": "MWF 10:00AM - 11:15AM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "10:00 AM - 11:15 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Maryland",
+                    "Room": "310"
+                }
+            ],
             "Areas": "E",
             "InstructionMethod": "In-person",
             "SectionCoRequisites": "",
@@ -462,7 +616,16 @@
             "Location": "Homewood Campus",
             "Building": "Mudd",
             "HasBio": null,
-            "Meetings": "MWF 12:00PM - 1:15PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "12:00 PM - 01:15 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Mudd",
+                    "Room": "26"
+                }
+            ],
             "Areas": "E",
             "InstructionMethod": "In-person",
             "SectionCoRequisites": "",
@@ -501,7 +664,16 @@
             "Location": "Homewood Campus",
             "Building": "Hodson",
             "HasBio": null,
-            "Meetings": "MWF 1:30PM - 2:45PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "01:30 PM - 02:45 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Hodson",
+                    "Room": "210"
+                }
+            ],
             "Areas": "E",
             "InstructionMethod": "In-person",
             "SectionCoRequisites": "",
@@ -542,7 +714,24 @@
             "Location": "Homewood Campus",
             "Building": "Gilman, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 9:00AM - 9:50AM, W 4:30PM - 5:20PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "09:00 AM - 09:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "W",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "04:30 PM - 05:20 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Gilman",
+                    "Room": "400"
+                }
+            ],
             "Areas": "EQ",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -581,7 +770,24 @@
             "Location": "Homewood Campus",
             "Building": "Hodson, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 9:00AM - 9:50AM, W 4:30PM - 5:20PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "09:00 AM - 09:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "W",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "04:30 PM - 05:20 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Hodson",
+                    "Room": "315"
+                }
+            ],
             "Areas": "EQ",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -620,7 +826,24 @@
             "Location": "Homewood Campus",
             "Building": "Hodson, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 9:00AM - 9:50AM, W 6:00PM - 6:50PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "09:00 AM - 09:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "W",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "06:00 PM - 06:50 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Hodson",
+                    "Room": "303"
+                }
+            ],
             "Areas": "EQ",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -659,7 +882,24 @@
             "Location": "Homewood Campus",
             "Building": "Krieger, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 9:00AM - 9:50AM, W 6:00PM - 6:50PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "09:00 AM - 09:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "W",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "06:00 PM - 06:50 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Krieger",
+                    "Room": "Laverty"
+                }
+            ],
             "Areas": "EQ",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -698,7 +938,24 @@
             "Location": "Homewood Campus",
             "Building": "Krieger, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 9:00AM - 9:50AM, Th 4:30PM - 5:20PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "09:00 AM - 09:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "Th",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "04:30 PM - 05:20 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Krieger",
+                    "Room": "300"
+                }
+            ],
             "Areas": "EQ",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -737,7 +994,24 @@
             "Location": "Homewood Campus",
             "Building": "Hodson, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 9:00AM - 9:50AM, Th 4:30PM - 5:20PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "09:00 AM - 09:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "Th",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "04:30 PM - 05:20 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Hodson",
+                    "Room": "305"
+                }
+            ],
             "Areas": "EQ",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -776,7 +1050,24 @@
             "Location": "Homewood Campus",
             "Building": "Krieger, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 9:00AM - 9:50AM, Th 6:00PM - 6:50PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "09:00 AM - 09:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "Th",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "06:00 PM - 06:50 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Krieger",
+                    "Room": "306"
+                }
+            ],
             "Areas": "EQ",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
@@ -815,7 +1106,24 @@
             "Location": "Homewood Campus",
             "Building": "Krieger, Shaffer",
             "HasBio": null,
-            "Meetings": "MWF 9:00AM - 9:50AM, Th 6:00PM - 6:50PM",
+            "Meetings": [
+                {
+                    "DOW": "MWF",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "09:00 AM - 09:50 AM",
+                    "Location": "Homewood Campus",
+                    "Building": "Shaffer",
+                    "Room": "3"
+                },
+                {
+                    "DOW": "Th",
+                    "Dates": "01-22-2024 to 04-26-2024",
+                    "Times": "06:00 PM - 06:50 PM",
+                    "Location": "Homewood Campus",
+                    "Building": "Krieger",
+                    "Room": "304"
+                }
+            ],
             "Areas": "EQ",
             "InstructionMethod": "In-person, In-person",
             "SectionCoRequisites": "",
