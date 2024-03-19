@@ -16,17 +16,31 @@ def write_data(data_dict):
     with open("data.json", "w") as outfile:
         outfile.write(json_object)
         
-def read_from_file():
-    print('FIXME: should read class data from json file')
-    return 0
+def read_from_file(file_name):
+    # Opening JSON file
+    f = open(file_name)
+ 
+    # returns JSON object as 
+    # a dictionary
+    data = json.load(f)
+ 
+    # Closing file
+    f.close()
+    
+    return data
+    
 
 def read_from_web(data_dict,term,api_key):
-    for key in data_dict:
-        data_dict[key] = class_api_call(key,term,api_key)
+    copy_dict = data_dict
+    for key in copy_dict:
+        copy_dict[key] = class_api_call(key,term,api_key)
+    return copy_dict
 
 if __name__ == '__main__':
     api_key = 'VEpYM62bVimeAcNhoXDgpE9GRGo9OBFF'
     # print(class_api_call('AS110109', 'Spring 2024', api_key))
-    # class_data = {'AS110109':[], 'AS180242':[], 'EN601220':[], 'EN601230':[]}
+    class_data = {'AS110109':[], 'AS180242':[], 'EN601220':[], 'EN601230':[]}
     # read_from_web(class_data,'Spring 2024', api_key)
     # write_data(class_data)
+    # class_data = read_from_file()
+    # print(class_data)
