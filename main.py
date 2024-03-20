@@ -12,7 +12,7 @@ time_weight = 0
 professor_weight = 0
 
 #acceptable times
-g_times = []
+g_times = [(0, 4*24*60)]
 
 #downloading data?
 get_mode = False
@@ -43,11 +43,36 @@ for key in class_data:
 
 #creating every variation of the classes
 all_schedules = all_variations(all_schedules, len(all_schedules)-1)
+#print(len(all_schedules))
 
 schedules_and_scores = []
 
 #TESTS
-print(get_times(all_schedules[0][0]['Meetings']))
-print(all_schedules[0][0]['Meetings'])
+#print(get_times(all_schedules[0][0]['Meetings']))
+#print(all_schedules[0][0]['Meetings'])
+
+# calculating scores and eliminating schedules that don't work
+for schedule in all_schedules:
+    all_times = []
+    add_schedule = True
+    for clas in schedule:
+        class_times = get_times(clas['Meetings'])
+        if not compare_times(class_times, all_times) and len(clas['Meetings']):
+            all_times += class_times
+        else:
+            add_schedule = False
+            break
+    if add_schedule:
+        score = 0
+        score += compare_times(all_times,g_times)
+        schedules_and_scores.append((schedule, score))
+        
+#print(len(schedules_and_scores))
+print(f'score: {schedules_and_scores[0][1]}')
+display_schedule(schedules_and_scores[0][0])
+        
+        
+    
+    
 
 

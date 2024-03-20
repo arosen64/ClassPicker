@@ -83,12 +83,26 @@ def get_times(Meetings):
 
 # returns percentage of times that overlap
 def compare_times(times, comparing_to):
+    if len(times) == 0 or len(comparing_to) == 0:
+        return 0.0
     times_in_range = 0
     for time_range1 in times:
         for time_range2 in comparing_to:
             if ((time_range1[0] >= time_range2[0]) and time_range1[0] <= (time_range2[1])) or ((time_range1[1] <= time_range2[1]) and time_range1[1] >= (time_range2[0])):
                 times_in_range += 1
     return times_in_range/len(times)
+
+def display_times(Meetings):
+    for time_period in Meetings:
+        print(f'{time_period["Times"]} on {time_period["DOW"]}')
+
+def display_schedule(schedule):
+    count = 1
+    for clas in schedule:
+        print(f'--CLASS {count}--')
+        display_times(clas["Meetings"])
+        print(f'Taught by {clas["Instructors"]}')
+        count += 1
         
     
 
