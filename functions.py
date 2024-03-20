@@ -11,10 +11,6 @@ def time_call(class_number,section_num,DOW,term,api_key):
     url_base = f'https://sis.jhu.edu/api/classes?key={api_key}&CourseNumber={class_number}{section_num}&DaysOfWeek=any|{DOW}&Term={term}'
     return requests.get(url_base).json()
 
-def read_time():
-    print('FIXME: should read a time')
-    return 0
-
 def write_data(data_dict,filename):
     json_object = json.dumps(data_dict, indent=4)
     with open(filename, "w") as outfile:
@@ -55,6 +51,7 @@ def all_variations(lst, index):
 
     return result
 
+# returns a list of the times for a particular class
 def get_times(Meetings):
     multipliers = {'M':0, 'T':24*60, 'W':2*24*60, 'Th':3*24*60, 'F':4*24*60}
     times = []
@@ -83,6 +80,16 @@ def get_times(Meetings):
             elif (time_period['DOW'][letter_index].isupper()):
                 times.append((start+multipliers['T'],end+multipliers['T']))
     return times
+
+# returns percentage of times that overlap
+def compare_times(times, comparing_to):
+    times_in_range = 0
+    for time_range1 in times:
+        for time_range2 in comparing_to:
+            if ((time_range1[0] >= time_range2[0]) and time_range1[0] <= (time_range2[1])) or ((time_range1[1] <= time_range2[1]) and time_range1[1] >= (time_range2[0])):
+                times_in_range += 1
+    return times_in_range/len(times)
+        
     
 
 if __name__ == '__main__':
@@ -93,6 +100,8 @@ if __name__ == '__main__':
     # write_data(class_data)
     # class_data = read_from_file()
     #print(class_data)
-    data = [[{'A':[]},{'B':[]},{'C':[]}],[{'1':[]},{'2':[]},{'3':[]}],[{'&':[]},{'@':[]},{'$':[]}]]
-    
-    print(len(all_variations(data,len(data)-1)))
+    #data = [[{'A':[]},{'B':[]},{'C':[]}],[{'1':[]},{'2':[]},{'3':[]}],[{'&':[]},{'@':[]},{'$':[]}]]
+    times = [(2070, 2145), (4950, 5025)]
+    compare_to = [(2071, 2145), (4950, 5026)]
+    print(compare_times(times,compare_to))
+    #print(len(all_variations(data,len(data)-1)))

@@ -44,6 +44,9 @@ for key in class_data:
 #creating every variation of the classes
 all_schedules = all_variations(all_schedules, len(all_schedules)-1)
 
+schedules_and_scores = []
+
+#TESTS
 print(get_times(all_schedules[0][0]['Meetings']))
 print(all_schedules[0][0]['Meetings'])
 
