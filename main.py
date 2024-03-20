@@ -2,20 +2,21 @@ import classes
 from functions import *
 
 #classes info
+preferences = get_preferences('preferences.json')
 api_key = 'VEpYM62bVimeAcNhoXDgpE9GRGo9OBFF'
 term = 'Spring 2024'
-class_data = {'AS110109':[], 'EN660203':[], 'AS180242':[], 'EN601220':[], 'EN601230':[]}
+class_data = preferences["classes"]
 combos= [('AS110109','EN660203')]
 
 #weights
-time_weight = 0
-professor_weight = 0
+time_weight = int(preferences["time weight"])/100
+professor_weight = int(preferences["professor weight"])/100
 
 #acceptable times
 g_times = [(0, 4*24*60)]
 
 #downloading data?
-get_mode = False
+get_mode = int(preferences["get mode"])
 
 #get/load data based on download mode
 if get_mode:

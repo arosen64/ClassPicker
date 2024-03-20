@@ -103,6 +103,22 @@ def display_schedule(schedule):
         display_times(clas["Meetings"])
         print(f'Taught by {clas["Instructors"]}')
         count += 1
+
+def get_preferences(file_name):
+    # Opening JSON file
+    f = open(file_name)
+ 
+    # returns JSON object as 
+    # a dictionary
+    data = json.load(f)
+    
+    data["good times"] = get_times(data["good times"])
+ 
+    # Closing file
+    f.close()
+    
+    return data
+    
         
     
 
@@ -119,3 +135,4 @@ if __name__ == '__main__':
     compare_to = [(2071, 2145), (4950, 5026)]
     print(compare_times(times,compare_to))
     #print(len(all_variations(data,len(data)-1)))
+    print(get_preferences('preferences.json'))

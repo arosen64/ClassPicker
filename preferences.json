@@ -1,0 +1,18 @@
+{
+    "classes": {"AS110109":[], "EN660203":[], "AS180242":[], "EN601230":[]},
+    "good times": [
+        {
+            "DOW": "MTWTh",
+            "Times": "10:00 AM - 04:00 PM"
+
+        },
+        {
+            "DOW": "F",
+            "Times": "10:30 AM - 02:00 PM"
+        }
+    ],
+    "get mode": "0",
+    "professor weight": "30",
+    "time weight": "50",
+    "seat weight": "20"
+}
