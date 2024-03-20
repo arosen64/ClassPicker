@@ -54,6 +54,35 @@ def all_variations(lst, index):
             result.append(variation + [item])
 
     return result
+
+def get_times(Meetings):
+    multipliers = {'M':0, 'T':24*60, 'W':2*24*60, 'Th':3*24*60, 'F':4*24*60}
+    times = []
+    #looping through the time periods
+    for time_period in Meetings:
+        time_str = time_period['Times']
+        #creating the base start and end times
+        start = int(time_str[0:2]) * 60 + int(time_str[3:5])
+        end = int(time_str[11:13]) * 60 + int(time_str[14:16])
+        #adding to the start and end if PM
+        if time_str[6:8] == 'PM':
+            start += 12*60
+        if time_str[18:20] == 'PM':
+            end += 12*60
+        for letter_index in range(len(time_period['DOW'])):
+            # everything other than Th and T
+            if (time_period['DOW'][letter_index] != 'T') and (time_period['DOW'][letter_index].isupper()):
+                times.append((start+multipliers[time_period['DOW'][letter_index]],end+multipliers[time_period['DOW'][letter_index]]))
+            # checking for Th
+            elif (letter_index+1 < len(time_period['DOW'])) and (time_period['DOW'][letter_index].isupper()):
+                if time_period['DOW'][letter_index + 1] == 'h':
+                    times.append((start+multipliers['Th'],end+multipliers['Th']))
+                else:
+                    times.append((start+multipliers['T'],end+multipliers['T']))
+            # checking for T
+            elif (time_period['DOW'][letter_index].isupper()):
+                times.append((start+multipliers['T'],end+multipliers['T']))
+    return times
     
 
 if __name__ == '__main__':

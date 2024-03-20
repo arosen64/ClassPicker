@@ -7,6 +7,13 @@ term = 'Spring 2024'
 class_data = {'AS110109':[], 'EN660203':[], 'AS180242':[], 'EN601220':[], 'EN601230':[]}
 combos= [('AS110109','EN660203')]
 
+#weights
+time_weight = 0
+professor_weight = 0
+
+#acceptable times
+g_times = []
+
 #downloading data?
 get_mode = False
 
@@ -37,6 +44,7 @@ for key in class_data:
 #creating every variation of the classes
 all_schedules = all_variations(all_schedules, len(all_schedules)-1)
 
-
+print(get_times(all_schedules[0][0]['Meetings']))
+print(all_schedules[0][0]['Meetings'])
 
 
