@@ -81,16 +81,27 @@ def get_times(Meetings):
                 times.append((start+multipliers['T'],end+multipliers['T']))
     return times
 
-# returns percentage of times that overlap
-def compare_times(times, comparing_to):
+# returns true if it finds overlapping times fale otherwise
+def overlap_times(times, comparing_to):
+    if len(times) == 0 or len(comparing_to) == 0:
+        return False
+    for time_range1 in times:
+        for time_range2 in comparing_to:
+            if ((time_range1[0] >= time_range2[0]) and time_range1[0] <= (time_range2[1])) or ((time_range1[1] <= time_range2[1]) and time_range1[1] >= (time_range2[0])):
+                return True
+    return False
+
+# returns the percentage of times that fall within the times provided
+def score_times(times, comparing_to):
     if len(times) == 0 or len(comparing_to) == 0:
         return 0.0
     times_in_range = 0
     for time_range1 in times:
         for time_range2 in comparing_to:
-            if ((time_range1[0] >= time_range2[0]) and time_range1[0] <= (time_range2[1])) or ((time_range1[1] <= time_range2[1]) and time_range1[1] >= (time_range2[0])):
+            if ((time_range1[0] >= time_range2[0]) and time_range1[0] <= (time_range2[1])) and ((time_range1[1] <= time_range2[1]) and time_range1[1] >= (time_range2[0])):
                 times_in_range += 1
     return times_in_range/len(times)
+    
 
 def display_times(Meetings):
     for time_period in Meetings:
@@ -113,11 +124,47 @@ def get_preferences(file_name):
     data = json.load(f)
     
     data["good times"] = get_times(data["good times"])
- 
+    for cls in data["classes"]:
+        data[cls] = int(data["classes"][cls])
+        data["classes"][cls] = []
+        
     # Closing file
     f.close()
     
     return data
+
+# returns a list of class times if there are no problems with the schedule otherwise returns nothing
+def is_valid_schedule(schedule,preferences):
+    all_times = []
+    for clas in schedule:
+        offering_name = clas["OfferingName"][0:2] + clas["OfferingName"][3:6] + clas["OfferingName"][7:]
+        class_time = get_times(clas["Meetings"])
+        if overlap_times(class_time, all_times) or not len(clas['Meetings']):
+            return []
+        elif len(clas["SectionRegRestrictions"]) and not int(preferences[offering_name]):
+            return []
+        elif clas["Status"] == "Closed":
+            return []
+        else:
+            all_times += class_time
+    return all_times
+
+def score_schedule(time_weight, seat_weight, professor_weight, good_times, good_professors, class_times, schedule):
+    time_score = score_times(class_times, good_times) * time_weight
+    valid_profs = 0
+    total_seats = 0
+    available_seats = 0
+    for clas in schedule:
+        for professor in good_professors:
+            if (professor.lower() in clas["Instructors"].lower()) or (professor.lower() in clas["InstructorsFullName"].lower()):
+                valid_profs += 1
+        total_seats += int(clas["MaxSeats"])
+        available_seats += int(clas["OpenSeats"])
+    return (valid_profs/len(schedule)) * professor_weight + (available_seats/total_seats) * seat_weight + time_score
+                
+    
+            
+            
     
         
     

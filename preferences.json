@@ -1,5 +1,5 @@
 {
-    "classes": {"AS110109":[], "EN660203":[], "AS180242":[], "EN601230":[]},
+    "classes": {"AS110109":"1", "EN660203":"1", "AS180242":"1", "EN601230":"1"},
     "good times": [
         {
             "DOW": "MTWTh",
@@ -14,5 +14,6 @@
     "get mode": "0",
     "professor weight": "30",
     "time weight": "50",
-    "seat weight": "20"
+    "seat weight": "20",
+    "term": "Fall 2024"
 }

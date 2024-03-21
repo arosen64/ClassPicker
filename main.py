@@ -4,16 +4,18 @@ from functions import *
 #classes info
 preferences = get_preferences('preferences.json')
 api_key = 'VEpYM62bVimeAcNhoXDgpE9GRGo9OBFF'
-term = 'Spring 2024'
+term = preferences["terms"]
 class_data = preferences["classes"]
 combos= [('AS110109','EN660203')]
 
 #weights
 time_weight = int(preferences["time weight"])/100
 professor_weight = int(preferences["professor weight"])/100
+seat_weight = int(preferences["seat weight"])/100
 
-#acceptable times
-g_times = [(0, 4*24*60)]
+#acceptable times and professors
+g_times = preferences["good times"]
+g_profs = []
 
 #downloading data?
 get_mode = int(preferences["get mode"])
@@ -54,21 +56,14 @@ schedules_and_scores = []
 
 # calculating scores and eliminating schedules that don't work
 for schedule in all_schedules:
-    all_times = []
-    add_schedule = True
-    for clas in schedule:
-        class_times = get_times(clas['Meetings'])
-        if not compare_times(class_times, all_times) and len(clas['Meetings']):
-            all_times += class_times
-        else:
-            add_schedule = False
-            break
-    if add_schedule:
-        score = 0
-        score += compare_times(all_times,g_times)
+    times = is_valid_schedule(schedule, preferences)
+    if len(times):
+        score = score_schedule(time_weight,seat_weight,professor_weight,g_times,g_profs,times,schedule)
         schedules_and_scores.append((schedule, score))
+
         
 #print(len(schedules_and_scores))
+schedules_and_scores = sorted(schedules_and_scores, key=lambda x: x[1], reverse=True)
 print(f'score: {schedules_and_scores[0][1]}')
 display_schedule(schedules_and_scores[0][0])
         
