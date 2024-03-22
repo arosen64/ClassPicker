@@ -3,7 +3,7 @@
     "good times": [
         {
             "DOW": "MTWTh",
-            "Times": "10:00 AM - 04:00 PM"
+            "Times": "10:00 AM - 06:00 PM"
 
         },
         {
@@ -11,9 +11,10 @@
             "Times": "10:30 AM - 02:00 PM"
         }
     ],
-    "get mode": "0",
+    "get mode": "1",
     "professor weight": "30",
     "time weight": "50",
     "seat weight": "20",
-    "term": "Fall 2024"
+    "term": "Fall 2024",
+    "api key":""
 }

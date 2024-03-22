@@ -98,7 +98,7 @@ def score_times(times, comparing_to):
     times_in_range = 0
     for time_range1 in times:
         for time_range2 in comparing_to:
-            if ((time_range1[0] >= time_range2[0]) and time_range1[0] <= (time_range2[1])) and ((time_range1[1] <= time_range2[1]) and time_range1[1] >= (time_range2[0])):
+            if ((time_range1[0] >= time_range2[0])) and ((time_range1[1] <= time_range2[1])):
                 times_in_range += 1
     return times_in_range/len(times)
     
@@ -111,6 +111,8 @@ def display_schedule(schedule):
     count = 1
     for clas in schedule:
         print(f'--CLASS {count}--')
+        print(clas["OfferingName"])
+        print(clas["Title"])
         display_times(clas["Meetings"])
         print(f'Taught by {clas["Instructors"]}')
         print(f'Section {clas["SectionName"]}')

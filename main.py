@@ -1,9 +1,8 @@
-import classes
 from functions import *
 
 #classes info
 preferences = get_preferences('preferences.json')
-api_key = 'VEpYM62bVimeAcNhoXDgpE9GRGo9OBFF'
+api_key = preferences["api key"]
 term = preferences["term"]
 class_data = preferences["classes"]
 combos= []
