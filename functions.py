@@ -113,6 +113,7 @@ def display_schedule(schedule):
         print(f'--CLASS {count}--')
         display_times(clas["Meetings"])
         print(f'Taught by {clas["Instructors"]}')
+        print(f'Section {clas["SectionName"]}')
         count += 1
 
 def get_preferences(file_name):
@@ -161,13 +162,9 @@ def score_schedule(time_weight, seat_weight, professor_weight, good_times, good_
         total_seats += int(clas["MaxSeats"])
         available_seats += int(clas["OpenSeats"])
     return (valid_profs/len(schedule)) * professor_weight + (available_seats/total_seats) * seat_weight + time_score
-                
+    
     
             
-            
-    
-        
-    
 
 if __name__ == '__main__':
     api_key = 'VEpYM62bVimeAcNhoXDgpE9GRGo9OBFF'

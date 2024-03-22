@@ -4,9 +4,9 @@ from functions import *
 #classes info
 preferences = get_preferences('preferences.json')
 api_key = 'VEpYM62bVimeAcNhoXDgpE9GRGo9OBFF'
-term = preferences["terms"]
+term = preferences["term"]
 class_data = preferences["classes"]
-combos= [('AS110109','EN660203')]
+combos= []
 
 #weights
 time_weight = int(preferences["time weight"])/100
@@ -62,10 +62,15 @@ for schedule in all_schedules:
         schedules_and_scores.append((schedule, score))
 
         
-#print(len(schedules_and_scores))
+    
 schedules_and_scores = sorted(schedules_and_scores, key=lambda x: x[1], reverse=True)
-print(f'score: {schedules_and_scores[0][1]}')
-display_schedule(schedules_and_scores[0][0])
+print(len(schedules_and_scores))
+for i in range(len(schedules_and_scores)):
+    print(f'score: {schedules_and_scores[i][1]}')
+    display_schedule(schedules_and_scores[i][0])
+    input("")
+    
+    
         
         
     
